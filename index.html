@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İbrahim Koca - Yazılım geliştirici kişisel web sitesi ve blogu">
+    <title>İbrahim Koca | Full-Stack Geliştirici</title>
+    
+    <!-- Modern Tipografi (Inter Font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3Ei%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Sayfa yüklenmeden temayı uygula -->
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var tema = null;
+            try { tema = localStorage.getItem('tema'); } catch (e) {}
+            if (!tema) tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            root.dataset.tema = tema;
+            root.classList.add('js');
+        })();
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container bar">
+            <a class="logo" href="#anasayfa">İbrahim Koca<span>.</span></a>
+            <nav id="menu" aria-label="Ana menü">
+                <ul class="nav-links">
+                    <li><a href="#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="#hakkimda">Hakkımda</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#projeler">Projeler</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <button id="tema" class="icon-btn" type="button" aria-label="Temayı değiştir"></button>
+                <button id="hamburger" class="icon-btn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="anasayfa" class="hero">
+            <div class="hero-bg"></div> <!-- Dönen estetik arka plan -->
+            <div class="container relative">
+                <div class="hero-content">
+                    <p class="eyebrow">Merhaba, ben</p>
+                    <h1 class="gradient-text">İbrahim Koca</h1>
+                    <p class="lead">Modern web teknolojileriyle çözümler üreten bir<br> 
+                        <span class="typed-text">Yazılım Geliştiriciyim.</span><span class="cursor">&nbsp;</span></p>
+                    <div class="buttons">
+                        <a class="btn" href="#projeler">Projelerimi İncele</a>
+                        <a class="btn btn-outline" href="#iletisim">İletişim</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hakkımda Section -->
+        <section id="hakkimda" class="alt">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Hakkımda</h2>
+                    <p class="section-sub">Kısaca hikayem ve kullandığım teknolojiler.</p>
+                </div>
+                <div class="about">
+                    <div class="about-text animate-on-scroll">
+                        <p>Bu site, yazılım dünyasındaki yolculuğumu belgelediğim kişisel dijital bahçemdir. Karmaşık problemleri basit ve sürdürülebilir kodlarla çözmeyi seviyorum.</p>
+                        <p>Boş zamanlarımda açık kaynak projelere katkıda bulunuyor, yeni teknolojileri deneyimleyerek kendimi güncel tutmaya çalışıyorum.</p>
+                    </div>
+                    <div class="panel animate-on-scroll card-spotlight">
+                        <h3>Teknoloji Yığını</h3>
+                        <!-- Marka İkonlu Grid Tasarımı -->
+                        <div class="tech-grid">
+                             <div class="tech-item">
+                                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="28" height="28">
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/c/c-original.svg" alt="" width="28" height="28" loading="lazy">
+                                <span>C</span>
+                            </div>
+                            <div class="tech-item">
+                                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="28" height="28">
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="28" height="28">
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="28" height="28">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="28" height="28">
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Blog</h2>
+                    <p class="section-sub">Deneyimlerimden süzülen teknik notlar.</p>
+                </div>
+                <div class="grid">
+                    <article class="card card-spotlight animate-on-scroll">
+                        <span class="date">01 Ekim 2026</span>
+                        <h3>GitHub Pages ile Yayınlama</h3>
+                        <p>Statik siteleri ücretsiz olarak nasıl CI/CD süreçleriyle yayına aldığımı adım adım anlattım.</p>
+                        <details class="post">
+                            <summary class="read-more">Yazıyı Oku →</summary>
+                            <p>Yazının tamamı yakında eklenecek.</p>
+                        </details>
+                    </article>
+                    <article class="card card-spotlight animate-on-scroll" style="transition-delay: 100ms;">
+                        <span class="date">28 Eylül 2026</span>
+                        <h3>Modern CSS: Grid ve Flexbox</h3>
+                        <p>Karmaşık arayüzleri sadece birkaç satır CSS kodu ile nasıl inşa edebileceğinize dair ipuçları.</p>
+                        <details class="post">
+                            <summary class="read-more">Yazıyı Oku →</summary>
+                            <p>Yazının tamamı yakında eklenecek.</p>
+                        </details>
+                    </article>
+                    <article class="card card-spotlight animate-on-scroll" style="transition-delay: 200ms;">
+                        <span class="date">15 Eylül 2026</span>
+                        <h3>DNS ve HTTPS Yapılandırması</h3>
+                        <p>A kaydı, CNAME ayarları ve ücretsiz SSL sertifikası kurulumu hakkında detaylı rehber.</p>
+                        <details class="post">
+                            <summary class="read-more">Yazıyı Oku →</summary>
+                            <p>Yazının tamamı yakında eklenecek.</p>
+                        </details>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projeler Section -->
+        <section id="projeler" class="alt">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Projeler</h2>
+                    <p class="section-sub">Üzerinde çalıştığım bazı öne çıkan işler.</p>
+                </div>
+                <div class="grid">
+                    <article class="card card-spotlight project-card animate-on-scroll">
+                        <h3>GymPro - Antrenman Takip Uygulaması</h3>
+                        <p>Spor salonundaki antrenmanları takip etmek için geliştirdiğim, çevrimdışı da çalışabilen bir PWA. Hareket sıralamasını sürükle-bırak ile değiştirme, son kullanılan kilo ve set bilgilerini hatırlama, set sonrası otomatik dinlenme sayacı ve koyu/açık tema özellikleri var.</p>
+                        <ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li><li class="tag">PWA</li></ul>
+                        <div class="card-links"><a href="http://brilliant-choux-4501d9.netlify.app" target="_blank" rel="noopener noreferrer">Canlı demo</a><a href="https://github.com/ibrahim-koca/gym-pro-app" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                    </article>
+                    <article class="card card-spotlight project-card animate-on-scroll" style="transition-delay: 100ms;">
+                        <h3>Sosyal Ağ Analiz Sistemi</h3>
+                        <p>Sosyal ağı graf olarak modelleyen bir C programı. DFS ile arkadaş arama, ortak arkadaş analizi ve topluluk tespiti yapıyor, kullanıcı aramada kırmızı-siyah ağaç kullanıyor.</p>
+                        <ul class="tags"><li class="tag">C</li><li class="tag">Graf</li><li class="tag">DFS</li></ul>
+                        <div class="card-links"><a href="https://github.com/ibrahim-koca/sosyal-ag-analizi" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                    </article>
+                    <article class="card card-spotlight project-card animate-on-scroll" style="transition-delay: 200ms;">
+                        <h3>Java ile Basit Web Sunucusu</h3>
+                        <p>Nesneye Yönelik Programlama dersi için, üçüncü parti kütüphane kullanmadan yalnızca Java'nın <code>java.net</code> paketiyle yazdığım bir HTTP sunucusu. 1989 portunu dinleyip gelen isteklere HTML sayfasıyla yanıt veriyor.</p>
+                        <ul class="tags"><li class="tag">Java</li><li class="tag">Socket</li></ul>
+                        <div class="card-links"><a href="https://github.com/ibrahim-koca/java-basit-web-sunucusu" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim Section -->
+        <section id="iletisim">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>İletişim</h2>
+                    <p class="section-sub">Yeni bir proje veya sadece sohbet etmek için bana ulaşın.</p>
+                </div>
+                <div class="grid contact-grid">
+                    <a class="card card-spotlight contact-card animate-on-scroll" href="mailto:ikoca1314@gmail.com">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <div>
+                            <h3>E-posta</h3>
+                            <p>ikoca1314@gmail.com</p>
+                        </div>
+                    </a>
+                    <a class="card card-spotlight contact-card animate-on-scroll" href="https://github.com/ibrahim-koca" target="_blank" rel="noopener noreferrer" style="transition-delay: 100ms;">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>github.com/ibrahim-koca</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="yil"></span> İbrahim Koca. Tüm hakları saklıdır.</p>
+            <a href="#anasayfa" class="back-to-top" aria-label="Yukarı çık">
+                Yukarı Çık 
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
